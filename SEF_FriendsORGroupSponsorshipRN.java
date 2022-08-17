@@ -210,7 +210,6 @@ public class SEF_FriendsORGroupSponsorshipRN extends BaseClass {
 		Utilities.hardWait(3);
 		
 		
-		
 		String SGN = driver.findElement(bySupporterGroupName).getText();
 		
 		driver.findElement(bySupporterGroupPname).sendKeys(SGN);
@@ -250,7 +249,7 @@ public class SEF_FriendsORGroupSponsorshipRN extends BaseClass {
 		Utilities.hardWait(4);
 		
 		//list takes all dates from selected month (given path is whole month selected border)
-				List<WebElement> dates = driver.findElements(By.xpath("//div[@id='ui-datepicker-div']"));
+		List<WebElement> dates = driver.findElements(By.xpath("//div[@id='ui-datepicker-div']"));
 				
 		//created variable "total_dates" to store all dates from list's "dates"
 		int total_dates = dates.size();
@@ -262,8 +261,6 @@ public class SEF_FriendsORGroupSponsorshipRN extends BaseClass {
 			{
 				//gets all dates from calendar and prints
 				String date = dates.get(i).getText();
-//				System.out.println(date);
-//				Utilities.hardWait(2);
 					
 					
 				//in this loop , checks selected calendar's date with "1" by "date" obj wchich is got text from calendar
